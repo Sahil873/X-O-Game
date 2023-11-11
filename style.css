@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&family=Roboto:wght@100;400;500;700;900&family=Urbanist:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.gameContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.boxContent {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8vw;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+.boxContent:hover {
+    background-color: aliceblue;
+}
+
+.gameInfo {
+    padding: 0 60px;
+}
+
+.gameInfo h1 {
+    text-align: center;
+}
+
+.info {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+}
+
+.info span {
+    margin-right: 2vw;
+}
+.info button {
+    border-radius: 4px;
+    background: a;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.win img{
+    position: relative;
+    top: 3vw;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+@media (max-width: 850px) {
+    .gameContainer {
+        flex-wrap: wrap;
+        column-gap: 110px;
+    }
+    .container {
+        grid-template-rows: repeat(3, 16vw);
+        grid-template-columns: repeat(3, 16vw);
+    }
+    .gameInfo {
+        margin-top: 50px;
+    }
+
+    .info span {
+        font-size: 18px;
+    }
+
+    .win {
+        text-align: center;
+    }
+}
+
+.line {
+    background-color: #27ed5f;
+    position: absolute;
+    width: 0;
+    height: 6px;
+    transform: translate(5vw, 15vw) rotate(135deg);
+    z-index: 1;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
